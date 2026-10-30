@@ -1,0 +1,106 @@
+// DEMO DATA ONLY. Brands, models and prices are made up so you can test the engine
+// without a database. Replace with your real MongoDB catalog (USE_MONGO=true).
+
+export const sampleProducts = [
+  // ---- Laptops ----
+  { id: 'lap-001', name: 'Zenvo Blaze 15', brand: 'Zenvo', category: 'laptop', price: 64990, rating: 4.4,
+    tags: ['gaming', 'rtx', 'fast display', '144hz'],
+    description: 'Entry-level gaming laptop with a 144Hz display.',
+    specs: { Processor: 'Ryzen 5 7535HS', RAM: '16 GB', Storage: '512 GB SSD', GPU: 'RTX 3050 6GB', Display: '15.6" 144Hz', Battery: '5 hrs' } },
+  { id: 'lap-002', name: 'Nexa Falcon G5', brand: 'Nexa', category: 'laptop', price: 69999, rating: 4.2,
+    tags: ['gaming', 'rtx', 'backlit keyboard'],
+    description: 'Gaming laptop with a strong GPU for its price.',
+    specs: { Processor: 'Core i5-12450H', RAM: '16 GB', Storage: '512 GB SSD', GPU: 'RTX 3050 4GB', Display: '15.6" 120Hz', Battery: '4.5 hrs' } },
+  { id: 'lap-003', name: 'Aurion Titan X', brand: 'Aurion', category: 'laptop', price: 94990, rating: 4.6,
+    tags: ['gaming', 'rtx', 'premium', '165hz'],
+    description: 'High-end gaming laptop for AAA titles.',
+    specs: { Processor: 'Ryzen 7 7840HS', RAM: '16 GB', Storage: '1 TB SSD', GPU: 'RTX 4060 8GB', Display: '16" 165Hz', Battery: '6 hrs' } },
+  { id: 'lap-004', name: 'Zenvo AirBook 14', brand: 'Zenvo', category: 'laptop', price: 52990, rating: 4.3,
+    tags: ['student', 'lightweight', 'long battery', 'office'],
+    description: 'Thin and light laptop for students and office work.',
+    specs: { Processor: 'Core i5-1235U', RAM: '8 GB', Storage: '512 GB SSD', GPU: 'Integrated', Display: '14" FHD', Battery: '10 hrs' } },
+  { id: 'lap-005', name: 'Nexa Study 15', brand: 'Nexa', category: 'laptop', price: 38990, rating: 4.0,
+    tags: ['student', 'budget', 'office'],
+    description: 'Affordable everyday laptop.',
+    specs: { Processor: 'Ryzen 3 7320U', RAM: '8 GB', Storage: '256 GB SSD', GPU: 'Integrated', Display: '15.6" FHD', Battery: '7 hrs' } },
+
+  // ---- Smartphones ----
+  { id: 'ph-001', name: 'Aurion Pulse 5G', brand: 'Aurion', category: 'smartphone', price: 19999, rating: 4.3,
+    tags: ['5g', 'budget', 'long battery'],
+    description: 'Budget 5G phone with a big battery.',
+    specs: { Display: '6.6" AMOLED', RAM: '8 GB', Storage: '128 GB', Camera: '50 MP', Battery: '5000 mAh' } },
+  { id: 'ph-002', name: 'Zenvo Lens Pro', brand: 'Zenvo', category: 'smartphone', price: 34999, rating: 4.5,
+    tags: ['camera', '5g', 'photography'],
+    description: 'Camera-focused mid-range phone.',
+    specs: { Display: '6.7" AMOLED 120Hz', RAM: '12 GB', Storage: '256 GB', Camera: '108 MP + OIS', Battery: '4800 mAh' } },
+  { id: 'ph-003', name: 'Nexa Play Max', brand: 'Nexa', category: 'smartphone', price: 27999, rating: 4.1,
+    tags: ['gaming', '5g', 'fast charging'],
+    description: 'Performance phone with fast charging.',
+    specs: { Display: '6.6" 144Hz', RAM: '8 GB', Storage: '256 GB', Camera: '64 MP', Battery: '5000 mAh' } },
+  { id: 'ph-004', name: 'Aurion Ultra', brand: 'Aurion', category: 'smartphone', price: 79999, rating: 4.7,
+    tags: ['flagship', 'camera', '5g', 'premium'],
+    description: 'Flagship phone with a top-tier camera system.',
+    specs: { Display: '6.8" LTPO 120Hz', RAM: '12 GB', Storage: '512 GB', Camera: '200 MP', Battery: '5000 mAh' } },
+
+  // ---- Headphones ----
+  { id: 'hp-001', name: 'Nexa BassBuds', brand: 'Nexa', category: 'headphones', price: 1999, rating: 4.0,
+    tags: ['budget', 'earbuds', 'bass'],
+    description: 'Wireless earbuds with punchy bass.',
+    specs: { Type: 'In-ear TWS', Battery: '30 hrs with case', ANC: 'No' } },
+  { id: 'hp-002', name: 'Zenvo Quiet One', brand: 'Zenvo', category: 'headphones', price: 7999, rating: 4.5,
+    tags: ['noise cancelling', 'anc', 'over-ear', 'travel'],
+    description: 'Over-ear headphones with active noise cancelling.',
+    specs: { Type: 'Over-ear', Battery: '40 hrs', ANC: 'Yes' } },
+  { id: 'hp-003', name: 'Aurion Studio Pro', brand: 'Aurion', category: 'headphones', price: 15999, rating: 4.6,
+    tags: ['premium', 'anc', 'over-ear', 'audiophile'],
+    description: 'Premium sound with adaptive noise cancelling.',
+    specs: { Type: 'Over-ear', Battery: '50 hrs', ANC: 'Yes (adaptive)' } },
+
+  // ---- Shoes ----
+  { id: 'sh-001', name: 'Nexa Stride Runner', brand: 'Nexa', category: 'shoes', price: 3499, rating: 4.2,
+    tags: ['running', 'lightweight', 'sports'],
+    description: 'Lightweight daily running shoes.',
+    specs: { Type: 'Running', Sole: 'EVA foam', Weight: '260 g' } },
+  { id: 'sh-002', name: 'Zenvo Court Classic', brand: 'Zenvo', category: 'shoes', price: 2799, rating: 4.1,
+    tags: ['casual', 'sneakers', 'white'],
+    description: 'Clean white casual sneakers.',
+    specs: { Type: 'Casual sneaker', Sole: 'Rubber', Weight: '340 g' } },
+  { id: 'sh-003', name: 'Aurion Trail Pro', brand: 'Aurion', category: 'shoes', price: 6499, rating: 4.4,
+    tags: ['trail', 'running', 'grip', 'outdoor'],
+    description: 'Grippy trail running shoes.',
+    specs: { Type: 'Trail running', Sole: 'Vibram-style rubber', Weight: '290 g' } },
+
+  // ---- Watches ----
+  { id: 'wt-001', name: 'Nexa FitBand Watch', brand: 'Nexa', category: 'watch', price: 3999, rating: 4.1,
+    tags: ['smartwatch', 'fitness', 'budget', 'long battery'],
+    description: 'Budget fitness smartwatch.',
+    specs: { Display: '1.8" AMOLED', Battery: '10 days', GPS: 'No' } },
+  { id: 'wt-002', name: 'Zenvo Orbit GPS', brand: 'Zenvo', category: 'watch', price: 12999, rating: 4.5,
+    tags: ['smartwatch', 'gps', 'fitness', 'running'],
+    description: 'GPS smartwatch for runners.',
+    specs: { Display: '1.4" AMOLED', Battery: '14 days', GPS: 'Yes' } },
+
+  // ---- Clothing ----
+  { id: 'cl-001', name: 'Aurion Everyday Tee (pack of 2)', brand: 'Aurion', category: 'clothing', price: 899, rating: 4.2,
+    tags: ['tshirt', 'cotton', 'casual', 'basic'],
+    description: 'Soft cotton t-shirts for daily wear.',
+    specs: { Fabric: '100% cotton', Fit: 'Regular' } },
+  { id: 'cl-002', name: 'Zenvo Slim Jeans', brand: 'Zenvo', category: 'clothing', price: 1799, rating: 4.0,
+    tags: ['jeans', 'denim', 'casual', 'slim fit'],
+    description: 'Slim-fit stretch denim.',
+    specs: { Fabric: 'Stretch denim', Fit: 'Slim' } },
+  { id: 'cl-003', name: 'Nexa Festive Kurta', brand: 'Nexa', category: 'clothing', price: 2499, rating: 4.3,
+    tags: ['kurta', 'festive', 'wedding', 'ethnic'],
+    description: 'Festive kurta for weddings and celebrations.',
+    specs: { Fabric: 'Cotton silk blend', Fit: 'Regular' } },
+];
+
+// DEMO orders for the support agent. Replace with your real orders collection later.
+export const sampleOrders = [
+  { id: 'SM-1001', status: 'Shipped', carrier: 'DemoExpress', eta: '2 to 3 days',
+    items: ['Zenvo Quiet One'], total: 7999 },
+  { id: 'SM-1002', status: 'Delivered', carrier: 'DemoExpress', eta: 'Delivered',
+    items: ['Nexa Stride Runner'], total: 3499 },
+  { id: 'SM-1003', status: 'Processing', carrier: 'Not assigned yet', eta: '5 to 7 days',
+    items: ['Aurion Pulse 5G'], total: 19999 },
+];
